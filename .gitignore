@@ -1,0 +1,6 @@
+.env
+.history/
+config/
+node_modules/
+images/
+*.json
