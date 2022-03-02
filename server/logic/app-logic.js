@@ -8,12 +8,9 @@ async function pageTest() {
 
 
 async function testByLocation(location) {
-    const response = await appDao.testByLocation(location)
-    if(response) {
-        return response
-    }
+    const request = await appDao.testByLocation(location);
+    return request
 }
-
 module.exports = {
     pageTest,
     testByLocation

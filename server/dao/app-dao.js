@@ -2,43 +2,49 @@
 require('dotenv').config();
 
 const
+    shellHandler = require('../assets/shellHandler'),
     webPageTest = require('webpagetest'),
-    wpt = new webPageTest("www.webpagetest.org", process.env.API_KEY);
+    wpt = new webPageTest("www.webpagetest.org", process.env.API_KEY),
+    fs = require('fs'),
+    XLSX = require('xlsx');
 
+let 
+    workbook = XLSX.utils.book_new(),
+    response = {},
+    locations = [];
 
 
 
 
 async function testByLocation(location) {
+    console.log("\u001b[1;35m Starting Testing at " + location);
     let options = {
         'firstViewOnly': true,
         'runs': 1,
         'location': `${location}:Chrome`,
         'connectivity': '4g',
         'pollResults': 5,
-        'timeout': 5000
-    }
+        'timeout': 10000
+    },
+        response;
 
-    wpt.runTest("https://www.webpagetest.org", options, (err, data) => {
-        if (data.data) {
-            console.log(
-                "Status : ", data.statusCode, "\n",
-                "Location : ", data.data.location.split(":")[0], "\n",
-                "Latency : ", data.data.latency
-            )
-            const response = {
-                status: data.statusCode,
-                location: location,
-                latency: data.data.latency
-            }
-            return response
-        } else {
+    response = await pageTesting(options);
+    shellHandler.removeFiles();
 
-            return err
-        }
-    });
+    return generateResponse(response)
+
 }
 
+const pageTesting = (options) => {
+    return new Promise((resolve, reject) => {
+        wpt.runTest("https://www.webpagetest.org", options, (err, data) => {
+            if (err) {
+                reject(err)
+            }
+            resolve(data)
+        })
+    })
+}
 
 async function pageTest() {
     locations = [
@@ -53,23 +59,24 @@ async function pageTest() {
             'connectivity': '4g',
             'pollResults': 5,
             'timeout': 5000
-        }
+        },
+            response;
 
+        response = await pageTesting(options);
 
-        wpt.runTest('https://docs.webpagetest.org', options, (err, data) => {
-            if (data) {
-                console.log(
-                    "Status : ", data.statusCode, "\n",
-                    "Location : ", data.data.location.split(":")[0], "\n",
-                    "Latency : ", data.data.latency
-
-                )
-            } else {
-                console.error(locations[location], err)
-            }
-        })
+        return generateResponse(response)
 
     }
+}
+
+const generateResponse = (response) => {
+    const responseObject = {
+        status: response.statusCode,
+        location: response.data.location,
+        latency: response.data.latency
+    }
+    console.log(`\u001b[1;36m`, responseObject)
+    return responseObject
 }
 
 module.exports = {

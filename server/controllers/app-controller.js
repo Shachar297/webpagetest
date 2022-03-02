@@ -1,6 +1,7 @@
 
     const express = require('express'),
     appLogic = require('../logic/app-logic'),
+    appDao = require('../dao/app-dao'),
     router = express.Router()
 
     router.get('/' , async (req, res, next) => {
@@ -14,10 +15,8 @@
 
     router.get("/:location" , async (req, res, next) => {
         const location = req.params.location;
-
         try {
-            const response = await appLogic.testByLocation(location)
-                res.send(response);
+            res.json(await appLogic.testByLocation(location));
         } catch (error) {
             return next(error);
         }
