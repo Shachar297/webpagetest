@@ -8,7 +8,7 @@ const
     fs = require('fs'),
     XLSX = require('xlsx');
 
-let 
+let
     workbook = XLSX.utils.book_new(),
     response = {},
     locations = [];
@@ -46,27 +46,17 @@ const pageTesting = (options) => {
     })
 }
 
-async function pageTest() {
-    locations = [
-        "Dulles", "Los Angeles"
-    ];
+async function pageTest(url) {
+    let response
 
-    for (let location = 0; location < locations.length; location++) {
-        let options = {
-            'firstViewOnly': true,
-            'runs': 1,
-            'location': `${locations[location]}:Chrome`,
-            'connectivity': '4g',
-            'pollResults': 5,
-            'timeout': 5000
-        },
-            response;
 
-        response = await pageTesting(options);
-
-        return generateResponse(response)
-
+    try {
+        response = await shellHandler.ping(url);
+        return response
+    } catch (error) {
+        throw new Error(error)
     }
+
 }
 
 const generateResponse = (response) => {

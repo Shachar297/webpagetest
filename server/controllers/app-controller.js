@@ -4,9 +4,10 @@
     appDao = require('../dao/app-dao'),
     router = express.Router()
 
-    router.get('/' , async (req, res, next) => {
+    router.get('/url/:url' , async (req, res, next) => {
+        const url = req.params.url;
         try {
-            res.json(await appLogic.pageTest());
+            res.json(await appLogic.pageTest(url));
         }catch(e) {
             return next(e);
         }

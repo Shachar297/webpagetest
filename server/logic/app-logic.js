@@ -1,9 +1,8 @@
 
 const appDao = require('../dao/app-dao');
 
-async function pageTest() {
-    const example = await appDao.pageTest();
-    return example
+async function pageTest(url) {
+    return await appDao.pageTest(url);
 }
 
 
