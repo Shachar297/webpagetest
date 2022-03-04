@@ -1,8 +1,11 @@
 
 require('dotenv').config();
 
+process.env.downloadIndex = 0;
+
 const
     shellHandler = require('../assets/shellHandler'),
+    fileHandler = require('../assets/fileHandler'),
     webPageTest = require('webpagetest'),
     wpt = new webPageTest("www.webpagetest.org", process.env.API_KEY),
     fs = require('fs'),
@@ -47,12 +50,17 @@ const pageTesting = (options) => {
 }
 
 async function pageTest(url) {
-    let response
+    process.env.downloadIndex++
+
+    let response,
+        fileName = `logs_${process.env.downloadIndex}.txt`
 
 
     try {
         response = await shellHandler.ping(url);
-        return response
+        const files = fileHandler.createLogFile(response.resultAsText, fileName);
+        // console.log(files)
+        return response.resultAsText
     } catch (error) {
         throw new Error(error)
     }
@@ -67,6 +75,12 @@ const generateResponse = (response) => {
     }
     console.log(`\u001b[1;36m`, responseObject)
     return responseObject
+}
+
+const downloadLogs = (response) => {
+    return new Promise((resolve, reject) => {
+
+    })
 }
 
 module.exports = {

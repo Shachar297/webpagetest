@@ -24,6 +24,14 @@
     })
 
 
+    router.get("/download/logs/" , async (req, res, next) => {
+        try {
+            res.json(await appLogic.downloadLogs());
+        } catch (error) {
+            return next(error);
+        }
+    });
+    
     module.exports = router;
 
 
