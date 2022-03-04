@@ -24,9 +24,11 @@
     })
 
 
-    router.get("/download/logs/" , async (req, res, next) => {
+    router.post("/download/logs/" , async (req, res, next) => {
+        const body = req.body;
+
         try {
-            res.json(await appLogic.downloadLogs());
+            res.writeHead(400, await appLogic.downloadLogs(body));
         } catch (error) {
             return next(error);
         }

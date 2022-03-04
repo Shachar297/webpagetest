@@ -1,20 +1,19 @@
 const
-    fs = require('fs-extra');
+    fs = require('fs');
 
 const createLogFile = async (txt, fileName) => {
     return new Promise((resolve, reject) => {
-        
-        const file = fs.writeFileSync(`${__dirname}/../files/${fileName}`, txt , err => {
+
+        const file = fs.writeFile(`${__dirname}/../files/${fileName}`, txt, err => {
             if (err) {
                 console.error(err);
                 reject(err);
             }
             console.log(file)
-            resolve(file);
+            resolve(`${fileName} Created successfully`);
         });
-        
+
     })
-    return `${__dirname}/../files/${fileName} Has Been Created successfully.`
 }
 
 

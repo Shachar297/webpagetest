@@ -58,7 +58,7 @@ async function pageTest(url) {
 
     try {
         response = await shellHandler.ping(url);
-        const files = fileHandler.createLogFile(response.resultAsText, fileName);
+        // const files = fileHandler.createLogFile(response.resultAsText, fileName);
         // console.log(files)
         return response.resultAsText
     } catch (error) {
@@ -77,14 +77,20 @@ const generateResponse = (response) => {
     return responseObject
 }
 
-const downloadLogs = (response) => {
-    return new Promise((resolve, reject) => {
+const downloadLogs = async (response) => {
+    console.log(response.data)
 
+    const fileName = `logs.txt`;
+    return new Promise(async (resolve, reject) => {
+        const file = await fileHandler.createLogFile(response.data, fileName);
+        console.log(file);
+        resolve("")
     })
 }
 
 module.exports = {
     pageTest,
-    testByLocation
+    testByLocation,
+    downloadLogs
 }
 

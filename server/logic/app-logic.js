@@ -11,8 +11,8 @@ async function testByLocation(location) {
     return request
 }
 
-async function downloadLogs() {
-    return await appDao.downloadLogs();
+async function downloadLogs(data) {
+    return await appDao.downloadLogs(data);
 }
 
 module.exports = {
