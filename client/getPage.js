@@ -94,21 +94,47 @@ const handleResponse = (response) => {
 
 
 
-const onDownloadLogs = (event) => {
+const onDownloadLogs = async (event) => {
+    console.log(event)
     event.preventDefault();
     const pingResult = { data: document.getElementById("getPage-status-code-response-message").value }
-    fetch(serverUrl + "download/logs/", {
+    await fetch(serverUrl + "download/logs/", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(pingResult)
     }).then(response => {
+        
         console.log(response)
+        console.log("--------------------------------")
+        response.json().then(json => {
+            const fileName = `${new Date().getFullYear()}_${new Date().getMonth()}_${new Date().getDate()}_${json.fileName}`
+            console.log(fileName)
+        onDownloadClick(json.file, fileName)
+
+        })
     }).catch(error => {
         console.log(error);
     })
 
+}
+
+const onDownloadClick = (data, fileName) => {
+    console.log(data, "dataaaaaaaaa")
+    const blob = new window.Blob([data], {type: 'text/plain'})
+    console.log(blob)
+
+    const link = document.createElement("a");
+    const url = window.URL.createObjectURL(blob);
+    link.href = url;
+    link.download = fileName;
+    link.attributes.download = fileName;
+    link.click();
+
+    window.URL.revokeObjectURL(url);
+
+    
 }
 
 const copyToClipBoard = async () => {

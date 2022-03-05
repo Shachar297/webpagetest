@@ -3,6 +3,8 @@ const
 express = require('express'),
 cors = require('cors');
 
+console.log("restarts")
+
 const appController = require('./controllers/app-controller')
 
 const server = express()

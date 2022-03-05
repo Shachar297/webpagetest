@@ -1,1 +1,110 @@
- 
+ 0 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=109.944 ms
+0 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=109.944 ms
+1 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=92.698 ms
+0 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=109.944 ms
+1 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=92.698 ms
+2 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=87.850 ms
+0 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=109.944 ms
+1 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=92.698 ms
+2 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=87.850 ms
+3 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=98.516 ms
+0 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=109.944 ms
+1 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=92.698 ms
+2 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=87.850 ms
+3 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=98.516 ms
+4 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=97.233 ms
+0 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=109.944 ms
+1 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=92.698 ms
+2 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=87.850 ms
+3 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=98.516 ms
+4 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=97.233 ms
+5 :  google.com (142.250.186.78): 56 data bytes
+Request timeout for icmp_seq 0
+0 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=109.944 ms
+1 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=92.698 ms
+2 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=87.850 ms
+3 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=98.516 ms
+4 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=97.233 ms
+5 :  google.com (142.250.186.78): 56 data bytes
+Request timeout for icmp_seq 0
+6 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=94.131 ms
+0 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=109.944 ms
+1 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=92.698 ms
+2 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=87.850 ms
+3 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=98.516 ms
+4 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=97.233 ms
+5 :  google.com (142.250.186.78): 56 data bytes
+Request timeout for icmp_seq 0
+6 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=94.131 ms
+7 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=91.279 ms
+0 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=109.944 ms
+1 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=92.698 ms
+2 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=87.850 ms
+3 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=98.516 ms
+4 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=97.233 ms
+5 :  google.com (142.250.186.78): 56 data bytes
+Request timeout for icmp_seq 0
+6 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=94.131 ms
+7 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=91.279 ms
+8 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=97.862 ms
+0 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=109.944 ms
+1 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=92.698 ms
+2 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=87.850 ms
+3 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=98.516 ms
+4 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=97.233 ms
+5 :  google.com (142.250.186.78): 56 data bytes
+Request timeout for icmp_seq 0
+6 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=94.131 ms
+7 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=91.279 ms
+8 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=97.862 ms
+9 :  google.com (142.250.186.78): 56 data bytes
+64 bytes from 142.250.186.78: icmp_seq=0 ttl=54 time=98.504 ms

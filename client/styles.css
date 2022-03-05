@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+button > a {
+  z-index: 2000;
+}
+
 .header {
   height: 20vh;
   border: solid black 1px;
@@ -21,7 +25,7 @@ select {
   margin-left: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100vh;
   max-width: 95.5vw;
   flex-wrap: wrap;
@@ -29,6 +33,9 @@ select {
 
 .container > div {
   min-width: 45%;
+  max-height: 25vh;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
 }
 
 form {

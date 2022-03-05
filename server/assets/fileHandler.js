@@ -12,7 +12,6 @@ const createLogFile = async (txt, fileName) => {
             console.log(file)
             resolve(`${fileName} Created successfully`);
         });
-
     })
 }
 

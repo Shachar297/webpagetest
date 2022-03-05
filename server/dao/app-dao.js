@@ -1,7 +1,6 @@
 
 require('dotenv').config();
 
-process.env.downloadIndex = 0;
 
 const
     shellHandler = require('../assets/shellHandler'),
@@ -50,7 +49,6 @@ const pageTesting = (options) => {
 }
 
 async function pageTest(url) {
-    process.env.downloadIndex++
 
     let response,
         fileName = `logs_${process.env.downloadIndex}.txt`
@@ -78,13 +76,11 @@ const generateResponse = (response) => {
 }
 
 const downloadLogs = async (response) => {
-    console.log(response.data)
-
     const fileName = `logs.txt`;
     return new Promise(async (resolve, reject) => {
-        const file = await fileHandler.createLogFile(response.data, fileName);
-        console.log(file);
-        resolve("")
+        // const file = await fileHandler.createLogFile(response.data, fileName);
+        // console.log(file);
+        resolve(`${__dirname}/../files/${fileName}`);
     })
 }
 
